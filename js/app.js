@@ -89,6 +89,32 @@ const gameState= {
     stars: 3
 };
 
+const gameController = {
+    cardOpen() {
+        return gameState.state[0];
+    },
+    cardMatch() {
+        return gameState.state[1];
+    },
+    cardMismatch() {
+        return gameState.state[2];
+    },
+    getCards() {
+        return gameState.cards;
+    },
+    getOpenCards() {
+        return gameState.openCards;
+    },
+    getCounts() {
+        return gameState.counts;
+    },
+    getMoves() {
+        return gameState.moves;
+    },
+    getStars() {
+        return gameState.stars;
+    }
+};
 /*
  * Display the cards on the page
  *   - shuffle the list of cards using the provided "shuffle" method below
