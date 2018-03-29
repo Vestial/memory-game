@@ -150,6 +150,51 @@ const gameView = {
 
         gameController.shuffle(cards);
 
+        for (let card of cards) {
+            let liElem = document.createElement('li');
+            let iElem = document.createElement('i');
+            liElem.classList.add(card.class, card.name);
+            iElem.className = card.icon;
+            liElem.appendChild(iElem);
+            this.deck.appendChild(liElem);
+            liElem.addEventListener('click', function() {
+                let stars = gameController.getStars();
+                let nMoves = gameController.getMoves();
+                if (liElem.classList.contains(open)) {
+                    return false;
+                }
+                else {
+                    gameController.addmoves();
+                    if (nMoves > 28 && nMoves <= 40) {
+                        stars = 2;
+
+                    } 
+                    else if (nMoves > 40) {
+                        stars = 1;
+                    }
+                    liElem.classList.add(open);
+                    openCards.push(liElem);
+                    if (openCards.length === 2) {
+                        let card1 = openCards[0];
+                        let card2 = openCards[1];
+                        if (card1.classList.contains(card.name) && card2.classList.contains(card.name)) {
+                            gameController.addCount();
+                            card1.classList.add(match);
+                            card2.classList.add(match);
+                            gameController.clearList(openCards);
+                        }
+                        else {
+                            card1.classList.add(mismatch);
+                            card2.classList.add(mismatch);
+                        }
+                    }
+                    if (gameModel.counter === 16) {
+                        // End game
+                        console.log("Congratulations!");
+                    }
+                }
+            });
+        }
     }   
 }
 /*
