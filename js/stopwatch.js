@@ -1,5 +1,5 @@
 class Stopwatch {
-    constructor(elem1, elem2) {
+    constructor(elem) {
 
 
         let time = 0;
@@ -12,8 +12,7 @@ class Stopwatch {
                 time += delta();
             }
             let formattedTime = timeFormat(time);
-            elem1.textContent = formattedTime;
-            elem2.textContent = formattedTime;
+            elem.textContent = formattedTime;
 
         };
 
@@ -30,15 +29,10 @@ class Stopwatch {
             let time = new Date(timeInMilSeconds);
             let minutes = time.getMinutes().toString();
             let seconds = time.getSeconds().toString();
-            // let milSeconds = time.getMilliseconds().toString();
 
             minutes.length < 2 ? minutes = `0${minutes}` : null;
             seconds.length < 2 ? seconds = `0${seconds}` : null;
-
-            // while (milSeconds.length < 3) {
-            //   milSeconds = `0${milSeconds}`;
-            // }
-
+            
             return `${minutes} : ${seconds}`;
         };
 

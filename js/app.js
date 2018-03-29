@@ -141,6 +141,21 @@ const gameController = {
 };
 
 const gameView = {
+    init() {
+        
+        const restartButton = document.getElementsByClassName('restart')[0];
+
+        this.deck = document.getElementsByClassName('deck')[0];
+        this.movesCount = document.getElementsByClassName('moves')[0];
+        this.scorePanel = document.getElementsByClassName('score-panel')[0];
+        this.gameboardCounter = document.getElementById('gameboardCounter');
+        this.star2 = document.getElementById('star2');
+        this.star3 = document.getElementById('star3');
+        this.watch = new Stopwatch(this.gameboardCounter);
+        restartButton.addEventListener('click', () => gameController.reloadGame());
+        this.render();
+
+    },
     render() {
         const cards = gameController.getCards();
         const openCards = gameController.getOpenCards();
