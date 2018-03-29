@@ -1,88 +1,93 @@
-/*
- * Create a list that holds all of your cards
- */
-cards: [
-    {
-        name: 'anchor',
-        class: 'card',
-        icon: 'fa fa-anchor'
-    },
-    {
-        name: 'anchor',
-        class: 'card',
-        icon: 'fa fa-anchor'
-    },
-    {
-        name: 'bicycle',
-        class: 'card',
-        icon: 'fa fa-bicycle'
-    },
-    {
-        name: 'bicycle',
-        class: 'card',
-        icon: 'fa fa-bicycle'
-    },
-    {
-        name: 'bolt',
-        class: 'card',
-        icon: 'fa fa-bolt'
-    },
-    {
-        name: 'bolt',
-        class: 'card',
-        icon: 'fa fa-bolt'
-    },
-    {
-        name: 'bomb',
-        class: 'card',
-        icon: 'fa fa-bomb'
-    },
-    {
-        name: 'bomb',
-        class: 'card',
-        icon: 'fa fa-bomb'
-    },
-    {
-        name: 'cube',
-        class: 'card',
-        icon: 'fa fa-cube'
-    },
-    {
-        name: 'cube',
-        class: 'card',
-        icon: 'fa fa-cube'
-    },
-    {
-        name: 'diamond',
-        icon: 'fa fa-diamond',
-        class: 'card'
-    },
-    {
-        name: 'diamond',
-        class: 'card',
-        icon: 'fa fa-diamond'
-    },
-    {
-        name: 'leaf',
-        class: 'card',
-        icon: 'fa fa-leaf'
-    },
-    {
-        name: 'leaf',
-        class: 'card',
-        icon: 'fa fa-leaf'
-    },
-    {
-        name: 'plane',
-        class: 'card',
-        icon: 'fa fa-paper-plane-o'
-    },
-    {
-        name: 'plane',
-        class: 'card',
-        icon: 'fa fa-paper-plane-o'
-    }
-]
+
+const gameState= {
+    cards: [
+        {
+            name: 'anchor',
+            class: 'card',
+            icon: 'fa fa-anchor'
+        },
+        {
+            name: 'anchor',
+            class: 'card',
+            icon: 'fa fa-anchor'
+        },
+        {
+            name: 'bicycle',
+            class: 'card',
+            icon: 'fa fa-bicycle'
+        },
+        {
+            name: 'bicycle',
+            class: 'card',
+            icon: 'fa fa-bicycle'
+        },
+        {
+            name: 'bolt',
+            class: 'card',
+            icon: 'fa fa-bolt'
+        },
+        {
+            name: 'bolt',
+            class: 'card',
+            icon: 'fa fa-bolt'
+        },
+        {
+            name: 'bomb',
+            class: 'card',
+            icon: 'fa fa-bomb'
+        },
+        {
+            name: 'bomb',
+            class: 'card',
+            icon: 'fa fa-bomb'
+        },
+        {
+            name: 'cube',
+            class: 'card',
+            icon: 'fa fa-cube'
+        },
+        {
+            name: 'cube',
+            class: 'card',
+            icon: 'fa fa-cube'
+        },
+        {
+            name: 'diamond',
+            icon: 'fa fa-diamond',
+            class: 'card'
+        },
+        {
+            name: 'diamond',
+            class: 'card',
+            icon: 'fa fa-diamond'
+        },
+        {
+            name: 'leaf',
+            class: 'card',
+            icon: 'fa fa-leaf'
+        },
+        {
+            name: 'leaf',
+            class: 'card',
+            icon: 'fa fa-leaf'
+        },
+        {
+            name: 'plane',
+            class: 'card',
+            icon: 'fa fa-paper-plane-o'
+        },
+        {
+            name: 'plane',
+            class: 'card',
+            icon: 'fa fa-paper-plane-o'
+        }
+    ],
+    state: ['open', 'match', 'mismatch'],
+    counts: 0,
+    moves: 0,
+    openCards: [],
+    stars: 3
+};
 
 /*
  * Display the cards on the page
