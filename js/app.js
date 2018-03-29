@@ -139,14 +139,19 @@ const gameController = {
         location.reload();
     }
 };
-/*
- * Display the cards on the page
- *   - shuffle the list of cards using the provided "shuffle" method below
- *   - loop through each card and create its HTML
- *   - add each card's HTML to the page
- */
 
+const gameView = {
+    render() {
+        const cards = gameController.getCards();
+        const openCards = gameController.getOpenCards();
+        const open =gameController.cardOpen();
+        const match = gameController.cardMatch();
+        const mismatch = gameController.cardMismatch();
 
+        gameController.shuffle(cards);
+
+    }   
+}
 /*
  * set up the event listener for a card. If a card is clicked:
  *  - display the card's symbol (put this functionality in another function that you call from this one)
