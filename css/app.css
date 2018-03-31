@@ -33,9 +33,14 @@ h1 {
     font-weight: 300;
 }
 
-/*
- * Styles for the deck of cards
- */
+ul {
+    list-style-type: none;
+}
+
+.center-elements {
+    align-items: center;
+    display: flex;
+}
 
 .deck {
     width: 660px;
@@ -63,22 +68,24 @@ h1 {
     justify-content: center;
     align-items: center;
     box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+    transition: all .3s;
 }
 
+.deck .card:hover {
+    background-color: rgba(46, 61, 73, 0.90);
+}
 .deck .card.open {
-    transform: rotateY(0);
     background: #02b3e4;
     cursor: default;
-}
-
-.deck .card.show {
     font-size: 33px;
 }
-
 .deck .card.match {
     cursor: default;
     background: #02ccba;
     font-size: 33px;
+}
+.deck .card.mismatch {
+    background-color: #F44336;
 }
 
 /*
@@ -106,4 +113,63 @@ h1 {
 .score-panel .restart {
     float: right;
     cursor: pointer;
+}
+.overlay {
+    background-color: transparent;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    position: fixed;
+    z-index: 1;
+}
+
+#congratulations-screen {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    position: fixed;
+    display: none;
+    overflow-x: hidden;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+.congratulations-screen-scoreBoard {
+    max-width: 600px;
+    border-radius: 6px;
+    margin: 4em auto;
+    padding: 1em;
+    background: #F5F5F5;
+}
+.congratulations-message {
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+.congratulations-stars {
+    padding: 0;
+    color: #FFEE58;    
+}
+.congratulations-stars li {
+    display: inline-block;
+}
+.congratulations-stats {
+    width: 64px;
+    font-weight: 400;
+    margin: .3em;
+    color: rgba(0, 0, 0, 0.5);
+}
+.reload-button {
+    padding: .6em;
+    width: 100%;
+    font-size: 1.2rem;
+    border: none;
+    background-color: #4DD0E1;
+    color: white;
+    font-weight: 700;
+    transition: all .25s;
+}
+.reload-button:hover {
+    background-color: #01579B;
 }
