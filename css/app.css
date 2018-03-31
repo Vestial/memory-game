@@ -173,3 +173,62 @@ ul {
 .reload-button:hover {
     background-color: #01579B;
 }
+
+/* Media queries */
+@media only screen and (max-width: 510px) {
+    h1 {
+        font-size: 1.8em;
+    }
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .deck {
+        max-width: 400px;
+        justify-content: space-around;
+        box-shadow: none;
+    }
+    .deck .card {
+        height: 80px;
+        width: 80px;
+    }
+    .score-panel {
+        font-size: 14px;
+    }
+    .score-panel .restart {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    h1 {
+        font-size: 1.8em;
+    }
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .deck {
+        max-width: 300px;
+        justify-content: space-around;
+        box-shadow: none;
+    }
+    .deck .card {
+        height: 50px;
+        width: 50px;
+    }
+    .score-panel {
+        font-size: 14px;
+        left: 25px;
+        position: relative;    
+    }
+    .score-panel .restart {
+        right: 48px;
+        font-size: 14px;
+        position: relative;  
+    }
+}
