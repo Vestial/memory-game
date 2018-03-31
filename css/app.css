@@ -186,13 +186,22 @@ ul {
         flex-direction: column;
     }
     .deck {
-        max-width: 400px;
-        justify-content: space-around;
-        box-shadow: none;
+        width: 300px;
+        min-height: 0px;
+        background: linear-gradient(160deg, #02ccba 0%, #aa7ecd 100%);
+        padding: 32px;
+        border-radius: 10px;
+        box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 0 3em;
     }
     .deck .card {
-        height: 80px;
-        width: 80px;
+        height: 50px;
+        width: 50px;
+        margin-bottom: 16px;
     }
     .score-panel {
         font-size: 14px;
