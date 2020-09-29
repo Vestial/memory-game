@@ -1,5 +1,6 @@
 # Memory Game Project
 
+See the project live at: http://memorygame-vestial.surge.sh/
 ## Table of Contents
 
 * [Gameplay](#gameplay)
